@@ -7,11 +7,18 @@
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<%= render 'layouts/header' %>  <%# loads the _header.html.erb %> 
+		<%= render 'layouts/header' %>  <%# loads the _header.html.erb file %> 
 
 	<div class="container"> <%# Fixed layout from Bootstrap Scaffolding %>
+
+		<%# Flash messages give a notice if something happens in the application, like "you´re successfully signed up" %>
+		<% flash.each do |name, msg| %>
+       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
+    <%# Flash messages ends here %>
+
 		<%= yield %>
-		<%= render 'layouts/footer' %>  <%# loads the _footer.html.erb %>
+		<%= render 'layouts/footer' %>  <%# loads the _footer.html.erb file %>
 	</div>
 
 	</body>

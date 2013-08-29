@@ -1,16 +1,21 @@
-<div class="hero-unit">
-	<h1>Welcome to One Moth Rails</h1>
-	<p>
-		You´ve found the home page for the
-		<%= link_to "One Month Rails", "http://onemonthrails.com", :target => "_blank" %> <%# ":target => blank" means open in the new tab #%>
-		application.
-	</p>
+<% if user_signed_in? %>
+	<h1>You are logged in!</h1>
 
-	<p> 
-		The homepage is still in progress. Meanwhile follow my blog
-		<%= link_to "Bored Oleg", "http://boredoleg.tumblr.com/", :target => "_blank" %> <%# ":target => blank" means open in the new tab #%>
-	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-	</p>
-</div>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to One Moth Rails</h1>
+		<p>
+			You´ve found the home page for the
+			<%= link_to "One Month Rails", "http://onemonthrails.com", :target => "_blank" %> <%# ":target => blank" means open in the new tab #%>
+			application.
+		</p>
+
+		<p> 
+			The homepage is still in progress. Meanwhile follow my blog
+			<%= link_to "Bored Oleg", "http://boredoleg.tumblr.com/", :target => "_blank" %> <%# ":target => blank" means open in the new tab #%>
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+	</div>
+<% end %>
