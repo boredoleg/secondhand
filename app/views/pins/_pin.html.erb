@@ -3,15 +3,13 @@
     <p class="description">
         <%= pin.description %>
     </p>
-    <p>
-      <strong>
-        Posted by <%= pin.user.name %>
-      </strong>
+    <p class="posted_by">
+        by <%= pin.user.name %>
     </p>
   <% if current_user == pin.user %>
     <p>
-      <%= link_to 'Edit', edit_pin_path(pin) %>
-      <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-mini" %>
+      <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini" %>
     </p>
   <% end %>
 </div>
