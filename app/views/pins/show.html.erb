@@ -3,10 +3,15 @@
         <div class="well">
             <p>
               <%= image_tag @pin.image %>
-              <%= @pin.description %>
+              <p class="decription_single">
+                <%= @pin.description %>
+              </p>
             </p>
+
             <p>
-              <%= @pin.user.name %>
+              <strong>
+                <%= @pin.user.name %>
+              </strong>
             </p>
             <% if current_user == @pin.user %>
 	            <%= link_to 'Edit', edit_pin_path(@pin) %>
