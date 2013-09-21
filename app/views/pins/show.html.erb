@@ -3,19 +3,24 @@
         <div class="well">
             <p>
               <%= image_tag @pin.image %>
-              <p class="decription_single">
+              <p class="title">
+                <strong>
+                  <%= @pin.title %>
+                </strong>
+              </p>
                 <%= @pin.description %>
               </p>
-            </p>
-
-            <p>
-              <strong>
-                <%= @pin.user.name %>
-              </strong>
-            </p>
+              <p class="price_show">
+               
+                  HKD <%= @pin.price %>
+              
+              </p>
+              <p class="contact">
+                Contact: <%= @pin.contact %>
+              </p>
             <% if current_user == @pin.user %>
-	            <%= link_to 'Edit', edit_pin_path(@pin) %>
-	            <%= link_to 'Back', pins_path %>
+	            <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-mini" %>
+	            <%= link_to 'Back', pins_path, class: "btn btn-mini" %>
 	           <% end %>
         </div>
     </div>

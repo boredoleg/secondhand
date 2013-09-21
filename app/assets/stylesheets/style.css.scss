@@ -9,7 +9,7 @@ $navbarBackground: white;
 @import 'bootstrap';
 
 body{
-	padding-top: 60px; // Distance between the top and the first line of the body content //
+	padding-top: 60px; /* Distance between the top and the first line of the body content */
 }
 
 @import 'bootstrap-responsive';
@@ -21,6 +21,7 @@ body{
 
 .footer{
 	margin-top: 50px; 
+  margin-bottom: 25px; 
 	color: $grayLight;
 	a {
 		color: $gray;
@@ -33,7 +34,7 @@ body{
     margin: 5px;
     padding: 5px;
     font-size: 12px;
-    line-height: 0.9em;
+    line-height: 1,4em;
     float: left;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -54,10 +55,11 @@ body{
     margin: 10px 0 5px;
 }
 
+/* Pin view after logg in */
 .well {
     padding: 5px;
-    font-size: 12px;
-    line-height: 1.1em;
+    font-size: 13px;
+    line-height: 1.6em;
     float: left;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -65,12 +67,34 @@ body{
     box-shadow: 1px 1px 5px #555;
 }
 
-.decription_single {
-    font-size: 14px;
-}
+
 
 .posted_by {
     font-size: 10px;
     color: $grayLight;
 }
+
+.title {
+    font-size: 14px;
+    margin: 7px 0 0px;
+    line-height: 2em;
+}
+
+.price {
+    font-size: 14px;
+    color: $gray;
+    float: right;
+}
+.price_show {
+    font-size: 20px;
+    color: $gray;
+    float: right;
+}
+
+.brand {
+    font-size: 20px;
+    color: $green;
+
+}
+
 

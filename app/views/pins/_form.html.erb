@@ -4,10 +4,13 @@
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
 
+
 	<%= f.input :image, label: "Upload an image" %>
 	<%= f.input :image_remote_url, label: "or enter a URL" %>
+  <%= f.input :title, as: :text, input_html: { rows: "1"} %>
   <%= f.input :description, as: :text, input_html: { rows: "3"} %>
-  
+  <%= f.input :price, as: :text, label: "Price in HKD", input_html: { rows: "1"} %>
+  <%= f.input :contact, as: :text, label: "Email or Tel.Nr", input_html: { rows: "1"} %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
