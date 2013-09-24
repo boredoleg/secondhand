@@ -1,12 +1,18 @@
 <div class="box">
   <%= link_to (image_tag pin.image(:medium)), pin %>
 
-    <p class="title">
-        <%= pin.title %>
+    <h1>
+      <%= pin.title %>
+    </h1>
+
+    <p>
+      <%= pin.description %>
     </p>
-    <p class="description">
-        <%= pin.description %>
+
+    <p class="contact"> 
+      Contact: Log in
     </p>
+
     <p class="price">
       <strong>
         HKD <%= pin.price %>
@@ -19,4 +25,5 @@
       <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini" %>
     </p>
   <% end %>
+  
 </div>
