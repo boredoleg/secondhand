@@ -2,10 +2,9 @@
 /* $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen); */
 
-$btnPrimaryBackground: green;
-$navbarBackgroundHighlight: #778899;
-$navbarBackground: #778899;
-$footerBackground: #778899;
+$btnPrimaryBackground: #9ccf31;
+$navbarBackgroundHighlight: #9ccf31;
+$navbarBackground: #9ccf31;
 
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Cookie);
@@ -17,14 +16,17 @@ body{
 @import 'bootstrap-responsive';
 
 .navbar .brand { 
-    font-size: 20px;
+    font-family: 'Cookie', cursive; 
+    font-size: 40px;
     font-weight: 150;
-    color: #F0FFFF;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
 }
 
 .navbar .nav > li > a {
-padding: 10px 15px 10px;
-color: #F0FFFF;
+    color: #F0FFFF;
+    text-align: right;
 }
 
 .navbar-inner {
@@ -37,31 +39,47 @@ color: #F0FFFF;
     padding-top: 15px;
 }
 
-.hero-unit {
+.jumbotron {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    background-color: transparent;
     text-align: center;
     color: #44687d;
+    height: 300px;
+    line-height: 8em;
 }
 
-.hero-unit h1 {
+.jumbotron h1 {
+    padding-top: 100px;
+    font-size: 60px;
+}
+
+.btn-info {
     font-family: 'Cookie', cursive; 
-    font-size: 80px;
-    color: #ff5e4d;
+    font-size: 30px;
 }
 
-.footer{
-	margin-top: 50px; 
-    height: 50px;
-    /* background-color: #778899; */
+
+#footer {
+    background: #9ccf31;
+    color: #F0FFFF;
+    border-top: 0px solid black;
+    text-shadow: 0px 0px 0px #222222;
+    a {
+    color: #fff;
+    }
+}
+
+
+.copyright {
     text-align: center;
-    padding-top: 20px;
-    font-size: 15px;
-	a {
-		color: #778899;
-	}
+    padding-top: 50px;
+}
+
+.section {
+padding: 30px 0px;
+margin: 0;
+position: relative;
 }
 
 .form-actions {
@@ -89,7 +107,7 @@ color: #F0FFFF;
 
 .box h1 {
     margin-top: -3px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .box img {
@@ -121,8 +139,6 @@ color: #F0FFFF;
     border-radius: 2px;
     box-shadow: 1px 1px 5px #555;
 }
-
-
 
 .posted_by {
     font-size: 10px;

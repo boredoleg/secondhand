@@ -1,22 +1,24 @@
 <div class="row">
     <div class="span6 offset3">
         <div class="well">
+
             <p>
               <%= image_tag @pin.image %>
-              <p class="title">
+              <p class="name">
                 <strong>
-                  <%= @pin.title %>
+                  <%= @pin.name %>
                 </strong>
               </p>
                 <%= @pin.description %>
               </p>
               <p class="price_show">
-               
                   HKD <%= @pin.price %>
-              
               </p>
-              <p class="contact">
-                Contact: <%= @pin.contact %>
+              <p class="phone">
+                Phone: <%= @pin.phone %>
+              </p>
+              <p class="email">
+                Email: <%= @pin.email %>
               </p>
             <% if current_user == @pin.user %>
 	            <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-mini" %>

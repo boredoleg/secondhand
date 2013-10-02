@@ -1,10 +1,13 @@
-class Pin < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :title, :price, :contact
 
-  validates :title, presence: true
+
+class Pin < ActiveRecord::Base
+  attr_accessible :description, :image, :image_remote_url, :name, :price, :phone, :email
+
+  validates :name, presence: true
 	validates :description, presence: true
   validates :price, presence: true
-  validates :contact, presence: true
+  validates :phone, presence: true
+  validates :email, presence: true
   
   validates :user_id, presence: true
   has_attached_file :image, styles: { medium: "320x240>"}
@@ -18,5 +21,4 @@ class Pin < ActiveRecord::Base
   	self.image = URI.parse(url_value) unless url_value.blank?
   	super
   end
-
 end

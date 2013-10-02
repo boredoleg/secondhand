@@ -1,14 +1,9 @@
 <% if user_signed_in? %>
-
-
 <% else %>
-	<div class="hero-unit">
-		<h1>Nice things from nice people</h1>
+	<div class="jumbotron">
+		<h1>Lovely place for lovely goods</h1>
 		<p>
-			Because new goods don´t have a character
-		</p>
-		<p>
-			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+			<%= link_to "Post a nice thing", new_pin_path, class: "btn btn-info btn-large" %>
 		</p>
 	</div>
 <% end %>

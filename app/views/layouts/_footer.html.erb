@@ -1,7 +1,28 @@
-<div class="footer">
+<footer class="section" id="footer" role="contentinfo">
 	<div class="container">
-		<small>
-			<%= link_to "nicenice ©2013", "http://hoodwow.com", :target => "_blank" %> <%# ":target => blank" means open in the new tab #%>
-		</small>
+		<div class="row-fluid">
+			<div class="span4">
+					<ul class="icons">
+						<p><%= link_to "About", about_path %></p>
+						<p><%= link_to "Contact", contact_path %></p>
+					</ul>
+				</div>
+					<div class="span4">
+						<a href="http://www.iubenda.com/privacy-policy/417741" class="iubenda-white iub-legal-only iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "http://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+						</a>
+					</div>
+				<div class="span4">
+						<div class="fb-like pull-right" data-href="https://www.facebook.com/nicethingsfromnicepeople" data-width="130" data-height="50o" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false">
+						</div>
+					</div>
+		</div>
+		<p class="copyright">
+			<small>
+			©
+			2013
+			Nice Things From Nice People, All Rights Reserved.
+			</small>
+		</p>
 	</div>
+</footer>
 </div>

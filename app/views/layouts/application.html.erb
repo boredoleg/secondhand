@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>hoodwow</title> <%# Tab title %> 
+	  <title>Nice Things From Nice People</title> <%# Tab title %> 
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
 	</head>
+
 	<body>
+		<%# Analytics Script Start %>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-43197927-2', 'nicethingsfromnicepeople.com');
+		  ga('send', 'pageview');
+		  </script>
+		<%# Analytics Script End %>
+
+		<%# Facebook Script Start %>
+
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			</script>
+			
+		<%# Facebook Script End %>
+
 		<%= render 'layouts/header' %>  <%# loads the _header.html.erb file %> 
 
-	<div class="container"> <%# Fixed layout from Bootstrap Scaffolding %>
+		<div class="container"> <%# Fixed layout from Bootstrap Scaffolding %>
 
-		<%# Flash messages give a notice if something happens in the application, like "you´re successfully signed up" %>
-		<% flash.each do |name, msg| %>
-       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-    <% end %>
-    <%# Flash messages ends here %>
+			<%# Flash messages give a notice if something happens in the application, like "you´re successfully signed up" %>
+			<% flash.each do |name, msg| %>
+	       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	    <% end %>
+	    <%# Flash messages ends here %>
 
-		<%= yield %>
-	</div>
+			<%= yield %>
+		</div>
 <%= render 'layouts/footer' %>  <%# loads the _footer.html.erb file %>
 	</body>
 </html>
