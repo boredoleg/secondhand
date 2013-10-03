@@ -1,9 +1,9 @@
 
 
 class Pin < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :name, :price, :phone, :email
+  attr_accessible :description, :image, :image_remote_url, :productname, :price, :phone, :email
 
-  validates :name, presence: true
+  validates :productname, presence: true
 	validates :description, presence: true
   validates :price, presence: true
   validates :phone, presence: true

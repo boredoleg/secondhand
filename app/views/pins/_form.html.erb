@@ -5,7 +5,7 @@
 
 	<%= f.input :image, label: "Upload an image" %>
 	<%= f.input :image_remote_url, label: "or enter a URL" %>
-  <%= f.input :name, as: :text, placeholder: "Make it teasing", input_html: { rows: "1"} %>
+  <%= f.input :productname, as: :text, placeholder: "Make it teasing", input_html: { rows: "1"} %>
   <%= f.input :description, as: :text, placeholder: "Keep it short and funny. You got 300 characters", input_html: { rows: "3", :maxlength => 300} %>
   <%= f.input :price, as: :decimal, placeholder: "Enter the price in HKD", label: "Price", input_html: { rows: "1"} %>
   <%= f.input :phone, input_html: { as: :phone}, placeholder: "", label: "Phone", input_html: { rows: "1"} %>
