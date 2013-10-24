@@ -1,15 +1,31 @@
-<h2>Sign in</h2>
+<div class="container">
+	<div class="row-fluid">
+	  <div class="span4"></div>
+	  	<div class="span4">
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+	<h3>Log in</h3>
 
-  <%= f.input :email %>
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-  <%= f.input :password %>
+	  <%= f.input :email %>
 
-	<%= f.input :remember_me, as: :boolean %>
+	  <%= f.input :password %>
 
-  <div class= "form-actions">
-  	<%= f.submit "Sign in", class: "btn btn-primary" %></div>
-<% end %>
+		<%= f.input :remember_me, as: :boolean %>
 
-<%= render "devise/shared/links" %>
+	  <div class="raw-fluid">
+	  <div class= "form-actions">
+	  	<div class="span4">
+	  	<%= f.submit "Log in", class: "btn btn-primary" %>
+	  	</div>
+	  	<div class="span4">
+	  		<%= render "devise/shared/links" %>
+	  		</div>
+	<% end %>
+
+
+	</div>
+</div>
+</div>
+</div>
+</div>

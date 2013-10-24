@@ -1,7 +1,8 @@
 <%= render 'pages/home' %>
+	<div class="container">
+	<div id="pins">
+	  <%= render @pins %>
+	</div>
 
-<div id="pins">
-  <%= render @pins %>
+	<%= will_paginate @pins %>
 </div>
-
-<%= will_paginate @pins %>

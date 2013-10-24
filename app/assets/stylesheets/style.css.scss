@@ -2,74 +2,77 @@
 /* $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen); */
 
-$btnPrimaryBackground: #9ccf31;
-$navbarBackgroundHighlight: #9ccf31;
-$navbarBackground: #9ccf31;
+$btnPrimaryBackground: #993366;
+$btnPrimaryBackgroundHighlight: #660033;
+$navbarBackgroundHighlight: #339798;
+$navbarBackground: #339798;
 
 @import 'bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Cookie);
 
 body{
-	padding-top: 80px; /* Distance between the top and the first line of the body content */
+	padding-top: 70px; /* Distance between the top and the first line of the body content */
 }
 
 @import 'bootstrap-responsive';
 
 .navbar .brand { 
-    font-family: 'Cookie', cursive; 
-    font-size: 40px;
-    font-weight: 150;
+    font-size: 20px;
     color: #fff;
-    padding: 25px;
     text-align: center;
 }
 
 .navbar .nav > li > a {
     color: #F0FFFF;
     text-align: right;
+    padding-top: 15px;
+    hover: #ffffff;
 }
 
 .navbar-inner {
 	@include box-shadow (none !important);
 	border: 0;
-    height: 68px;
 }
 
 .nav {
     padding-top: 15px;
 }
 
-.jumbotron {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    text-align: center;
-    color: #44687d;
-    height: 300px;
+.masthead{
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em 0.2em black;
     line-height: 8em;
+    background-image: url(hero_background.jpg); 
+    text-align: center; 
+    min-height: 450px;
+    background-size: cover;
 }
 
-.jumbotron h1 {
-    padding-top: 100px;
-    font-size: 60px;
+.masthead h1 span { 
+    font-size: 81px;
+    background-color: rgba(33,33,33,0.6);
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px; 
+    display: inline-block;
+    margin-top: 70px;
+    line-height: 1em;
 }
 
-.btn-info {
-    font-family: 'Cookie', cursive; 
+.masthead p span { 
+    background-color: rgba(33,33,33,0.6);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; 
+    display: inline-block;
     font-size: 30px;
 }
 
-
-#footer {
-    background: #9ccf31;
-    color: #F0FFFF;
-    border-top: 0px solid black;
-    text-shadow: 0px 0px 0px #222222;
-    a {
-    color: #fff;
-    }
+.masthead .btn {
+    padding: 19px 24px;
+    font-size: 25px;
 }
-
 
 .copyright {
     text-align: center;
@@ -84,6 +87,7 @@ position: relative;
 
 .form-actions {
     background-color: transparent;
+    border-top: 0px solid #e5e5e5;
 }
 
 .container h2 {
@@ -153,13 +157,55 @@ position: relative;
 
 .price {
     font-size: 14px;
-    color: #ff5e4d;
+    color: #993366;
     float: right;
 }
 .price_show {
     font-size: 20px;
-    color: #ff5e4d;
+    color: #993366;
     float: right;
 }
 
+input,
+textarea,
+.uneditable-input {
+  width: 300px;
+}
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  height: 50px;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+.fa-facebook-square {
+    padding-left: 20px;
+}
 

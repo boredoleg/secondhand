@@ -1,9 +1,11 @@
 <% if user_signed_in? %>
 <% else %>
-	<div class="jumbotron">
-		<h1>Lovely place for lovely goods</h1>
-		<p>
-			<%= link_to "Post a nice thing", new_pin_path, class: "btn btn-info btn-large" %>
+	<div class="masthead">
+		<div class="container">
+		<h1><span>Find and sell used items.</span></h1>
+		<p class="lead"><span>In simple and fast manner. No bull%&it bingo.</span></p>
+			<%= link_to "Post a nice thing", new_pin_path, class: "btn btn-primary btn-large" %>
 		</p>
+	</div>
 	</div>
 <% end %>

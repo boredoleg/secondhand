@@ -1,5 +1,13 @@
 <div class="container">
-	<h1>New pin</h1>
-		<%= render 'form' %>
-				<%= link_to 'Back', pins_path %>
+	<div class="row-fluid">
+		<div class="span4"></div>
+			<div class="span4">
+				<h3>Post a Nice Thing</h3>
+				<%= render 'form' %>
+				<div class="span4 offset4">
+					<%= link_to 'Cancel', pins_path, class:"btn btn-secondary" %>
+				</div>
 			</div>
+		</div>
+	</div>
+</div>

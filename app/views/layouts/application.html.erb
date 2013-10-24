@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<%= favicon_link_tag 'favicon.ico' %>
 	  <title>Nice Things From Nice People</title> <%# Tab title %> 
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
+	  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -36,16 +38,15 @@
 
 		<%= render 'layouts/header' %>  <%# loads the _header.html.erb file %> 
 
-		<div class="container"> <%# Fixed layout from Bootstrap Scaffolding %>
-
 			<%# Flash messages give a notice if something happens in the application, like "you´re successfully signed up" %>
+			<br>
 			<% flash.each do |name, msg| %>
 	       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
 	    <% end %>
 	    <%# Flash messages ends here %>
 
 			<%= yield %>
+			<%= render 'layouts/footer' %>  <%# loads the _footer.html.erb file %>
 		</div>
-<%= render 'layouts/footer' %>  <%# loads the _footer.html.erb file %>
 	</body>
 </html>

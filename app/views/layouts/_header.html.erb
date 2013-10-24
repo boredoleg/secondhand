@@ -11,19 +11,20 @@
 	      </a>
 	   
 	      <!-- Be sure to leave the brand out there if you want it shown -->
-	      <%= link_to "Nice things from nice people", root_path, class: "brand" %> <!-- return to home by clicking on the logo -->
+	      <%= link_to image_tag("nicenice_logo.png", alt: "Rails"), root_path, class: "brand" %>
+	       <!-- return to home by clicking on the logo -->
 	 
 	      <!-- Everything you want hidden at 940px or less, place within here -->
 	      <div class="nav-collapse collapse">
 	        <!-- .nav, .navbar-search, .navbar-form, etc -->
 	        <ul class="nav pull-right">
-	        	<li><%= link_to "+ Add Pin", new_pin_path %></li>
-	   			<li><%= link_to "Sign up", new_user_registration_path %></li>
+	        	<li><%= link_to "+ Post", new_pin_path %></li>
      				<% if user_signed_in? %> <!-- Ruby code starts -->
    					<li><%= link_to "Edit profile", edit_user_registration_path %></li>
    					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
      				<% else %>
         			<li><%= link_to "Login", new_user_session_path %></li>
+        			<li><%= link_to "Sign up", new_user_registration_path %></li>
         		<% end %> <!-- Ruby code ends, important tag! -->
     			</ul>
 	      </div>
