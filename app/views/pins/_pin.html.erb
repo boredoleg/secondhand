@@ -9,22 +9,27 @@
       <%= pin.description %>
     </p>
 
+
     <% if user_signed_in? %>
     <p class="phone"> 
       Contact: <%= pin.phone %>
     </p>
+     <p class="email"> 
+      Contact: <%= pin.email %>
+    </p>
 
     <% else %>
 
+    <p class="phone"> 
+      Contact: <strong>Log in</strong>
+    </p>
+    <% end %>
     <p class="price">
       <strong>
         HKD <%= pin.price %>
       </strong>
     </p>
-    <p class="phone"> 
-      Contact: <strong>Log in</strong>
-    </p>
-<% end %>
+
 <% if current_user == pin.user %>
     <p>
       <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-mini" %>
