@@ -1,31 +1,32 @@
 <div class="container">
 	<div class="row-fluid">
-	  <div class="span4"></div>
-	  	<div class="span4">
+		<div class="span4">
+		</div>
+		<div class="span4">
 
-	<h3>Log in</h3>
+		<h3>Log in</h3>
 
-	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-	  <%= f.input :email %>
+		<%= f.input :email %>
 
-	  <%= f.input :password %>
+		<%= f.input :password %>
 
 		<%= f.input :remember_me, as: :boolean %>
 
-	  <div class="raw-fluid">
-	  <div class= "form-actions">
-	  	<div class="span4">
-	  	<%= f.submit "Log in", class: "btn btn-primary" %>
-	  	</div>
-	  	<div class="span4">
-	  		<%= render "devise/shared/links" %>
-	  		</div>
-	<% end %>
+		<div class="row-fluid">
+			<div class= "form-actions" >
+				<div class="span4">
 
+					<%= f.submit "Log in", class: "btn btn-primary" %>
+				</div>
 
+		<%= render "devise/shared/links" %>
+
+		<% end %>
+		</div>
+		</div>
 	</div>
 </div>
-</div>
-</div>
-</div>
+
+
